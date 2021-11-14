@@ -1,0 +1,15 @@
+{
+  "name": "readcsv",
+  "version": "0.0.1",
+  "description": "Read CSV",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Jesus Ramos",
+  "license": "MIT",
+  "dependencies": {
+    "csv": "^5.5.3",
+    "csv-writer": "^1.6.0"
+  }
+}
