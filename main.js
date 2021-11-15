@@ -11,7 +11,7 @@ function readCSV(direction, name) {
         let aux = auxArr.map((x) => {
             return {
                 id_order: x.ID,
-                order_note: x.TEXTO === '' ? null : x.TEXTO
+                order_note: x.TEXTO === '' ? 'null' : String(x.TEXTO).replace(/(\r\n|\n|\r)/gm, " ")
             }
         });
         const csvWriter = createCsvWriter({
@@ -33,4 +33,3 @@ function readCSV(direction, name) {
     })
 }
 readCSV('./notas_pedidos.csv','notas')
-readCSV('./out.csv','outNew')
